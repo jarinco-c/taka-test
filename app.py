@@ -41,7 +41,7 @@ def pdf_to_images(pdf_bytes: bytes, dpi: int = 150) -> list[bytes]:
 def recognize_image(image_bytes: bytes) -> str:
     img_array = image_bytes_to_array(image_bytes)
     results = reader.readtext(img_array, paragraph=True)
-    lines = [text for (_, text, _) in results]
+    lines = [text for (_, text) in results]
     return "\n".join(lines) if lines else "（文字を検出できませんでした）"
 
 
