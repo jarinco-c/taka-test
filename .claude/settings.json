@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd /home/user/taka-test && git add -A && git diff --cached --quiet || git commit -m \"auto-save: $(date '+%Y-%m-%d %H:%M')\" && git push origin HEAD 2>/dev/null || true",
+            "statusMessage": "変更をGitHubに保存中..."
+          }
+        ]
+      }
+    ]
+  }
+}
