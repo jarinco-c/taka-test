@@ -196,7 +196,7 @@
 </head>
 <body>
   <h1>手書き文字認識</h1>
-  <p class="subtitle">PDF・写真をアップロードしてテキストに変換 (EasyOCR)</p>
+  <p class="subtitle">PDF・写真をアップロードしてテキストに変換 (Claude OCR)</p>
 
   <div class="card">
     <form id="form">
@@ -220,6 +220,12 @@
         <label for="pages">読み取るページ（PDF・省略時は全ページ）</label>
         <input type="text" id="pages" name="pages" placeholder="例: 1,3,5 または 1-3" />
         <small>画像ファイルの場合は不要</small>
+      </div>
+
+      <div class="field">
+        <label for="hint">補足情報・ヒント（任意）</label>
+        <input type="text" id="hint" name="hint" placeholder="例: 金型管理台帳、表形式、手書き" />
+        <small>文書の種類や特徴を入力するとより正確に認識されます</small>
       </div>
 
       <button type="submit" class="submit-btn" id="submitBtn">文字を読み取る</button>
